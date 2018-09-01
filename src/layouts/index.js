@@ -1,20 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-
 import Header from '../components/header'
-import './index.css'
+import './boxx.css'
 
 const Layout = ({ children, data }) => (
   <div>
     <Helmet
-      title={data.site.siteMetadata.title}
+      title="boxx.ai"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
       ]}
+      link={[
+        { href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,700' },
+      ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
+    <Header />
     <div
       style={{
         margin: '0 auto',
